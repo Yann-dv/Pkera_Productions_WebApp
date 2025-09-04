@@ -24,9 +24,17 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  // GitHub Pages deployment configuration
+  base: process.env.NODE_ENV === "production" ? "/Pkera_Productions_WebApp/" : "/",
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    // Generate index.html for SPA routing on GitHub Pages
+    rollupOptions: {
+      input: {
+        main: path.resolve(import.meta.dirname, "client", "index.html"),
+      },
+    },
   },
   server: {
     fs: {

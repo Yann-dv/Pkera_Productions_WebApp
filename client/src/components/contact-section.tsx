@@ -41,18 +41,21 @@ export default function ContactSection({ producer }: ContactSectionProps) {
     },
   });
 
+  // TODO: Implement EmailJS or Formspree for static contact form functionality
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contacts", data);
-      return response.json();
+      // Simulate form submission for static deployment
+      // In production, replace this with EmailJS or Formspree integration
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log("Contact form data:", data);
+      return { success: true };
     },
     onSuccess: () => {
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Message received!",
+        description: "Thank you for your message. This is a demo - please contact directly via email or social media.",
       });
       form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
     },
     onError: (error) => {
       toast({

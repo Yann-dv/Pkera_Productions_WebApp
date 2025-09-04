@@ -1,6 +1,6 @@
 # Pkera Productions Web Application
 
-A modern full-stack web application for showcasing documentary productions, managing testimonials, and providing contact functionality for Pkera_Productions.
+A modern static web application for showcasing documentary productions, displaying testimonials, and providing contact functionality for Pkera_Productions. **Now optimized for GitHub Pages deployment!**
 
 ## 🎬 Project Overview
 
@@ -14,30 +14,23 @@ This web application serves as a digital portfolio and business platform for Pke
 
 ## 🏗️ Technical Architecture
 
-### Frontend
+### Frontend (Static Deployment)
 - **Framework**: React 18 with TypeScript
-- **Routing**: Wouter (lightweight React router)
+- **Routing**: Wouter (lightweight React router) with GitHub Pages SPA support
 - **UI Components**: Radix UI primitives with custom styling
 - **Styling**: Tailwind CSS with PostCSS
-- **State Management**: TanStack Query (React Query) for server state
+- **State Management**: TanStack Query (React Query) for data fetching
 - **Form Handling**: React Hook Form with Zod validation
-- **Build Tool**: Vite
+- **Build Tool**: Vite with GitHub Pages optimization
+- **Data Source**: Static JSON files (no backend required)
 
-### Backend
-- **Runtime**: Node.js with Express.js
-- **Language**: TypeScript
-- **Database**: PostgreSQL with Neon serverless
-- **ORM**: Drizzle ORM for type-safe database operations
-- **Session Management**: Express sessions with PostgreSQL store
-- **Development**: Hot reload with tsx watch
-
-### Database Schema
-The application uses the following main entities:
-- **Documentaries**: Core content with metadata, URLs, and categorization
-- **Testimonials**: Client feedback with ratings and company information
-- **Contacts**: Contact form submissions with timestamps
-- **Producer Info**: Producer profile and experience details
-- **Users**: Authentication system for admin access
+### Data Management
+- **Static Data**: JSON files served from `/public/data/`
+  - `documentaries.json` - Documentary portfolio data
+  - `testimonials.json` - Client testimonials and reviews
+  - `producer.json` - Producer profile and experience
+- **Contact Form**: Demo implementation (ready for EmailJS/Formspree integration)
+- **Deployment**: Automated GitHub Actions workflow
 
 ### Project Structure
 ```
@@ -48,25 +41,30 @@ The application uses the following main entities:
 │   │   ├── hooks/          # Custom React hooks
 │   │   ├── lib/            # Utility functions and configs
 │   │   └── App.tsx         # Main application component
-│   └── public/             # Static assets
-├── server/                 # Backend Express application
-│   ├── index.ts            # Server entry point
-│   ├── routes.ts           # API route definitions
-│   ├── storage.ts          # Database connection and queries
-│   └── vite.ts             # Vite integration for development
-├── shared/                 # Shared types and schemas
-│   └── schema.ts           # Database schema and Zod validations
-└── migrations/             # Database migration files
+│   ├── public/
+│   │   ├── data/           # Static JSON data files
+│   │   │   ├── documentaries.json
+│   │   │   ├── testimonials.json
+│   │   │   └── producer.json
+│   │   ├── images/         # Static image assets
+│   │   └── 404.html        # GitHub Pages SPA routing support
+│   ├── index.html          # Main HTML template with SPA routing
+│   └── vite.config.ts      # Vite configuration for GitHub Pages
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions deployment workflow
+├── shared/                 # Shared TypeScript types and schemas
+└── package.json            # Dependencies and deployment scripts
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- PostgreSQL database (or Neon serverless account)
 - Git
+- GitHub account (for deployment)
 
-### Installation
+### Local Development
 
 1. **Clone the repository**
    ```bash
@@ -79,95 +77,117 @@ The application uses the following main entities:
    npm install
    ```
 
-3. **Environment Setup**
-   Create a `.env` file in the root directory:
-   ```env
-   DATABASE_URL=your_postgresql_connection_string
-   NODE_ENV=development
-   ```
-
-4. **Database Setup**
+3. **Start development server**
    ```bash
-   # Push schema to database
-   npm run db:push
-   ```
-
-5. **Development Server**
-   ```bash
-   # Start development server with hot reload
    npm run dev
    ```
-   The application will be available at `http://localhost:5000`
+   The application will be available at `http://localhost:5173`
 
-### Production Build
-
-1. **Build the application**
+4. **Preview production build locally**
    ```bash
-   npm run build
+   npm run build:static
+   npm run preview
    ```
 
-2. **Start production server**
+### GitHub Pages Deployment
+
+#### Automatic Deployment (Recommended)
+1. **Fork or clone this repository to your GitHub account**
+2. **Enable GitHub Pages in repository settings**
+   - Go to Settings → Pages
+   - Source: GitHub Actions
+3. **Push changes to main branch**
+   - The GitHub Actions workflow will automatically build and deploy
+   - Your site will be available at `https://YOUR_USERNAME.github.io/Pkera_Productions_WebApp`
+
+#### Manual Deployment
+1. **Build for production**
    ```bash
-   npm start
+   npm run build:static
+   ```
+
+2. **Deploy to GitHub Pages**
+   ```bash
+   npm run deploy
    ```
 
 ## 📝 Available Scripts
 
 - `npm run dev` - Start development server with hot reload
-- `npm run build` - Build for production
-- `npm start` - Start production server
+- `npm run build:static` - Build for GitHub Pages production deployment
+- `npm run preview` - Preview production build locally
+- `npm run deploy` - Build and deploy to GitHub Pages
 - `npm run check` - Run TypeScript type checking
-- `npm run db:push` - Push database schema changes
 
 ## 🛠️ Development Workflow
 
-### Adding New Features
-1. Define database schema changes in `shared/schema.ts`
-2. Run `npm run db:push` to update the database
-3. Create API routes in `server/routes.ts`
-4. Implement frontend components in `client/src/`
-5. Add routing in `client/src/App.tsx` if needed
+### Adding New Content
+1. **Update static data files** in `client/public/data/`:
+   - `documentaries.json` - Add new documentary entries
+   - `testimonials.json` - Add client testimonials
+   - `producer.json` - Update producer information
+2. **Implement new components** in `client/src/components/`
+3. **Add new pages** in `client/src/pages/`
+4. **Update routing** in `client/src/App.tsx` if needed
+5. **Test locally** with `npm run dev`
+6. **Deploy** by pushing to GitHub (automatic) or `npm run deploy`
 
-### Database Operations
-- Schema definitions are in `shared/schema.ts`
-- Database queries are handled in `server/storage.ts`
-- Use Drizzle ORM for type-safe database operations
-- Zod schemas provide runtime validation
+### Data Management
+- **Static JSON files** serve all application data
+- **No database required** - perfect for GitHub Pages
+- **Type safety** maintained through TypeScript interfaces
+- **Easy updates** by editing JSON files directly
 
 ## 🌐 Deployment
 
-This application is designed to be deployed on modern hosting platforms:
+This application is optimized for **GitHub Pages** deployment:
 
-### Recommended Platforms
-- **Vercel**: Excellent for the frontend with serverless functions
-- **Railway**: Great for full-stack applications with database
-- **Render**: Versatile platform supporting both frontend and backend
-- **Fly.io**: Global deployment with Docker support
+### GitHub Pages Features
+- ✅ **Free hosting** for public repositories
+- ✅ **Automatic deployment** via GitHub Actions
+- ✅ **Custom domain support** (optional)
+- ✅ **HTTPS by default**
+- ✅ **Global CDN** for fast loading
 
-### Environment Variables for Production
-```env
-DATABASE_URL=your_production_database_url
-NODE_ENV=production
-```
+### Alternative Static Hosting
+The built application can also be deployed to:
+- **Netlify** - Drag and drop the `dist` folder
+- **Vercel** - Connect your GitHub repository
+- **Surge.sh** - Simple command-line deployment
+- **Firebase Hosting** - Google's hosting platform
+
+### Custom Domain Setup (Optional)
+1. Add a `CNAME` file to `client/public/` with your domain
+2. Configure DNS settings with your domain provider
+3. Enable custom domain in GitHub Pages settings
 
 ## 🔧 Technology Stack
 
 ### Core Technologies
-- **TypeScript** - Type safety across the entire stack
-- **React** - Modern UI library with hooks
-- **Express.js** - Minimal and flexible Node.js framework
-- **PostgreSQL** - Robust relational database
-- **Drizzle ORM** - Type-safe database toolkit
+- **TypeScript** - Type safety across the entire application
+- **React 18** - Modern UI library with hooks and concurrent features
+- **Vite** - Lightning-fast build tool and dev server
+- **Static JSON** - Simple, reliable data storage
 
 ### UI/UX
 - **Tailwind CSS** - Utility-first CSS framework
 - **Radix UI** - Accessible component primitives
 - **Wouter** - Minimalist routing for React
+- **React Hook Form** - Performant form handling
+- **Zod** - TypeScript-first schema validation
 
 ### Developer Experience
-- **Vite** - Fast build tool and dev server
+- **GitHub Actions** - Automated CI/CD pipeline
+- **GitHub Pages** - Free, reliable static hosting
 - **ESBuild** - Fast JavaScript bundler
 - **Hot Module Replacement** - Instant feedback during development
+- **TypeScript** - Enhanced developer experience with type safety
+
+### Performance & SEO
+- **Static Site Generation** - Fast loading times
+- **SPA Routing** - Smooth navigation experience
+- **Optimized Assets** - Compressed and cached resources
+- **CDN Delivery** - Global content distribution
 
 ## 📄 License
 
