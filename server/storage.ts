@@ -61,7 +61,7 @@ export class MemStorage implements IStorage {
       {
         id: "1",
         title: "Digital Disconnect",
-        description: "A thought-provoking exploration of how social media and digital technology are reshaping human relationships. This 90-minute documentary follows five individuals as they navigate the challenges of authentic connection in an increasingly virtual world.",
+        description: "A thought-provoking exploration of how social media and digital technology are reshaping human relationships. this 90-minute documentary follows five individuals as they navigate the challenges of authentic connection in an increasingly virtual world.",
         category: "technology",
         year: "2024",
         imageUrl: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
@@ -202,7 +202,7 @@ export class MemStorage implements IStorage {
         name: "Sarah Chen",
         role: "Netflix Documentary Director",
         company: "Netflix",
-        testimonial: "Marcus has an incredible ability to build trust with his subjects and extract authentic, powerful stories. His documentaries don't just inform—they transform perspectives.",
+        testimonial: "Marcus has an incredible ability to build trust with her subjects and extract authentic, powerful stories. her documentaries don't just inform—they transform perspectives.",
         avatarUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
         rating: "5"
       },
@@ -220,7 +220,7 @@ export class MemStorage implements IStorage {
         name: "Emily Thompson",
         role: "Film Critic",
         company: "The Guardian",
-        testimonial: "Marcus consistently delivers documentaries that are both artistically compelling and socially impactful. His work sets the standard for documentary filmmaking.",
+        testimonial: "Marcus consistently delivers documentaries that are both artistically compelling and socially impactful. her work sets the standard for documentary filmmaking.",
         avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
         rating: "5"
       }
@@ -231,21 +231,21 @@ export class MemStorage implements IStorage {
     // Initialize producer info
     this.producerInfo = {
       id: "1",
-      name: "Marcus Rivera",
+      name: "Perrine Keramphele",
       title: "Documentary Producer",
-      bio: "With over 15 years in documentary filmmaking, I've dedicated my career to amplifying voices that need to be heard and stories that demand to be told. My work has taken me across six continents, documenting everything from environmental crises to social justice movements.",
-      email: "marcus@documentaryproducer.com",
+      bio: "With over 5 years in documentary filmmaking, I've dedicated my career to amplifying voices that need to be heard and stories that demand to be told. My work has taken me across six continents, documenting everything from environmental crises to social justice movements.",
+      email: "pkera@documentaryproducer.com",
       phone: "+1 (555) 123-4567",
-      location: "Los Angeles, CA",
-      experience: "15+ Years",
-      documentariesCount: "47 Released",
-      awardsCount: "12 International",
-      countriesCount: "32 Filmed In",
+      location: "Paris, CA",
+      experience: "5+ Years",
+      documentariesCount: "10 Released",
+      awardsCount: "1 International",
+      countriesCount: "5 Filmed In",
       socialLinks: JSON.stringify({
-        instagram: "#",
+        instagram: "https://www.instagram.com/pkera_productions",
         tiktok: "#", 
         linkedin: "#",
-        youtube: "#",
+        youtube: "https://www.youtube.com/@Pkera_productions",
         twitter: "#"
       })
     };
@@ -292,7 +292,17 @@ export class MemStorage implements IStorage {
 
   async createDocumentary(insertDocumentary: InsertDocumentary): Promise<Documentary> {
     const id = randomUUID();
-    const documentary: Documentary = { ...insertDocumentary, id };
+    const documentary: Documentary = {
+      ...insertDocumentary,
+      id,
+      trailerUrl: insertDocumentary.trailerUrl ?? null,
+      fullDocUrl: insertDocumentary.fullDocUrl ?? null,
+      awards: insertDocumentary.awards ?? null,
+      status: insertDocumentary.status ?? null,
+      platforms: insertDocumentary.platforms ?? null,
+      runtime: insertDocumentary.runtime ?? null,
+      socialLinks: insertDocumentary.socialLinks ?? null
+    };
     this.documentaries.set(id, documentary);
     return documentary;
   }
@@ -304,7 +314,11 @@ export class MemStorage implements IStorage {
 
   async createTestimonial(insertTestimonial: InsertTestimonial): Promise<Testimonial> {
     const id = randomUUID();
-    const testimonial: Testimonial = { ...insertTestimonial, id };
+    const testimonial: Testimonial = {
+      ...insertTestimonial,
+      id,
+      rating: insertTestimonial.rating ?? "5"
+    };
     this.testimonials.set(id, testimonial);
     return testimonial;
   }
@@ -332,8 +346,13 @@ export class MemStorage implements IStorage {
 
   async updateProducerInfo(info: InsertProducerInfo): Promise<ProducerInfo> {
     const id = this.producerInfo?.id || randomUUID();
-    this.producerInfo = { ...info, id };
-    return this.producerInfo;
+    const updatedInfo: ProducerInfo = {
+      ...info,
+      id,
+      socialLinks: info.socialLinks ?? null
+    };
+    this.producerInfo = updatedInfo;
+    return updatedInfo;
   }
 }
 

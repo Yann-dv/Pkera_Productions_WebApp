@@ -33,7 +33,7 @@ export default function HeroSection({ producer }: HeroSectionProps) {
               <span className="text-primary"> Matter</span>
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-gray-300 leading-relaxed">
-              Award-winning documentary producer with 15+ years of experience bringing untold stories to life through compelling visual narratives.
+              Dcumentary producer with 5+ years of experience bringing untold stories to life through compelling visual narratives.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8">
@@ -104,8 +104,8 @@ export default function HeroSection({ producer }: HeroSectionProps) {
           
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000"
-              alt="Marcus Rivera - Documentary Producer"
+              src="/images/hero-portrait.jpg"
+              alt="Perrine Keramphele - Documentary Producer"
               className="rounded-2xl shadow-2xl w-full"
               data-testid="img-hero-portrait"
             />
@@ -122,7 +122,7 @@ export default function HeroSection({ producer }: HeroSectionProps) {
             <div className="absolute -bottom-6 -left-6 bg-primary p-4 rounded-xl shadow-lg">
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground" data-testid="text-awards-count">
-                  12
+                  1
                 </div>
                 <div className="text-sm text-foreground">Awards Won</div>
               </div>

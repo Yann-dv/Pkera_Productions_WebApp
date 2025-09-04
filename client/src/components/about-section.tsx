@@ -69,7 +69,7 @@ export default function AboutSection({ producer }: AboutSectionProps) {
           <div className="space-y-8">
             <img
               src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-              alt="Marcus Rivera filming documentary"
+              alt="Perrine Keramphele filming documentary"
               className="rounded-2xl shadow-xl w-full"
               data-testid="img-about-main"
             />

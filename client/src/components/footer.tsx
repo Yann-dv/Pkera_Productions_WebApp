@@ -22,7 +22,7 @@ export default function Footer({ producer }: FooterProps) {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
             <h3 className="text-2xl font-serif font-bold mb-4" data-testid="text-footer-name">
-              {producer?.name || "Marcus Rivera"}
+              {producer?.name || "Perrine Keramphele"}
             </h3>
             <p className="text-gray-300 mb-6 max-w-md" data-testid="text-footer-description">
               Documentary producer dedicated to amplifying important voices and creating meaningful change through powerful storytelling.
@@ -131,7 +131,7 @@ export default function Footer({ producer }: FooterProps) {
         </div>
         
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Marcus Rivera. All rights reserved. | Designed for impactful storytelling.</p>
+          <p>&copy; 2024 Perrine Keramphele. All rights reserved. | Designed for impactful storytelling.</p>
         </div>
       </div>
     </footer>

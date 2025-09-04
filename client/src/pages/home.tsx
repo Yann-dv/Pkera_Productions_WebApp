@@ -36,8 +36,8 @@ export default function Home() {
 
   return (
     <>
-      <title>Marcus Rivera - Documentary Producer | Award-Winning Storyteller</title>
-      <meta name="description" content="Marcus Rivera is an award-winning documentary producer with 15+ years of experience. Explore his portfolio of powerful documentaries on social issues, environment, and technology." />
+      <title>Perrine Keramphele - Documentary Producer | Storyteller</title>
+      <meta name="description" content="Perrine Keramphele is a documentary producer with 5+ years of experience. Explore her portfolio of powerful documentaries on social issues, environment, and technology." />
       
       <Navigation />
       <HeroSection producer={producer} />

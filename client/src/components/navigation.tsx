@@ -17,7 +17,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <h1 className="text-xl font-serif font-semibold">Marcus Rivera</h1>
+            <h1 className="text-xl text-white font-serif font-semibold">Perrine Keramphele</h1>
             <span className="ml-3 text-sm text-muted-foreground">Documentary Producer</span>
           </div>
           

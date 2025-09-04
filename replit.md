@@ -1,6 +1,6 @@
 # Overview
 
-This is a full-stack documentary producer portfolio website built with React and Express. The application showcases Marcus Rivera's documentary work, allowing visitors to browse his portfolio, read testimonials, learn about his background, and contact him directly. The site features a modern, responsive design with smooth scrolling navigation and professional aesthetics.
+This is Pkera Productions WebApp - a full-stack documentary producer portfolio website built with React and Express. The application showcases Perrine Keramphele's documentary work, allowing visitors to browse her portfolio, read testimonials, learn about her background, and contact her directly. The site features a modern, responsive design with smooth scrolling navigation and professional aesthetics.
 
 # User Preferences
 
