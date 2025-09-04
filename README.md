@@ -106,17 +106,14 @@ This web application serves as a digital portfolio and business platform for Pke
    npm run build:static
    ```
 
-2. **Deploy to GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
+2. **Deploy manually** (if needed)
+   - Upload the contents of `dist/public/` to your hosting provider
+   - Or push changes to trigger automatic GitHub Actions deployment
 
 ## 📝 Available Scripts
 
-- `npm run dev` - Start development server with hot reload
 - `npm run build:static` - Build for GitHub Pages production deployment
 - `npm run preview` - Preview production build locally
-- `npm run deploy` - Build and deploy to GitHub Pages
 - `npm run check` - Run TypeScript type checking
 
 ## 🛠️ Development Workflow
@@ -129,8 +126,8 @@ This web application serves as a digital portfolio and business platform for Pke
 2. **Implement new components** in `client/src/components/`
 3. **Add new pages** in `client/src/pages/`
 4. **Update routing** in `client/src/App.tsx` if needed
-5. **Test locally** with `npm run dev`
-6. **Deploy** by pushing to GitHub (automatic) or `npm run deploy`
+5. **Test locally** with `npm run build:static && npm run preview`
+6. **Deploy** by pushing to GitHub (automatic via GitHub Actions)
 
 ### Data Management
 - **Static JSON files** serve all application data

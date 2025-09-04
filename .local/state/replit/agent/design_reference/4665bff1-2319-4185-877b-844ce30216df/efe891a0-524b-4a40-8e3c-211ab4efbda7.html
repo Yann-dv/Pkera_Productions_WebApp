@@ -1,0 +1,932 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perrine Keramphele - Documentary Producer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    popover: {
+                        DEFAULT: "var(--popover)",
+                        foreground: "var(--popover-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                    },
+                    destructive: {
+                        DEFAULT: "var(--destructive)",
+                        foreground: "var(--destructive-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                },
+                fontFamily: {
+                    sans: ["Inter", "system-ui", "sans-serif"],
+                    serif: ["Playfair Display", "serif"],
+                }
+            },
+        }
+    };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --background: hsl(0 0% 100%);
+            --foreground: hsl(222 84% 5%);
+            --card: hsl(0 0% 100%);
+            --card-foreground: hsl(222 84% 5%);
+            --popover: hsl(0 0% 100%);
+            --popover-foreground: hsl(222 84% 5%);
+            --primary: hsl(45 100% 51%);
+            --primary-foreground: hsl(222 84% 5%);
+            --secondary: hsl(210 40% 96%);
+            --secondary-foreground: hsl(222 84% 5%);
+            --muted: hsl(210 40% 96%);
+            --muted-foreground: hsl(215 16% 47%);
+            --accent: hsl(210 40% 96%);
+            --accent-foreground: hsl(222 84% 5%);
+            --destructive: hsl(0 84% 60%);
+            --destructive-foreground: hsl(210 40% 98%);
+            --border: hsl(214 32% 91%);
+            --input: hsl(214 32% 91%);
+            --ring: hsl(222 84% 5%);
+            --radius: 0.75rem;
+            --font-sans: 'Inter', system-ui, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, hsl(222 84% 5%) 0%, hsl(215 25% 27%) 100%);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            transition: all 0.2s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-2px);
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground font-sans scroll-smooth">
+    
+    <!-- @COMPONENT: NavigationHeader -->
+    <nav class="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-xl tewt-white font-serif font-semibold">Perrine Keramphele</h1>
+                    <span class="ml-3 text-sm text-muted-foreground">Documentary Producer</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-foreground hover:text-primary transition-colors">Home</a>
+                    <a href="#portfolio" class="text-foreground hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#about" class="text-foreground hover:text-primary transition-colors">About</a>
+                    <a href="#contact" class="text-foreground hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: NavigationHeader -->
+
+    <!-- @COMPONENT: HeroSection -->
+    <section id="home" class="hero-gradient pt-20 pb-16 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
+                        Crafting Stories That
+                        <span class="text-primary">Matter</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-gray-300 leading-relaxed">
+                        Award-winning documentary producer with 15+ years of experience bringing untold stories to life through compelling visual narratives.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="#portfolio" class="bg-primary text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                            View Portfolio
+                        </a>
+                        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-foreground transition-colors">
+                            Get In Touch
+                        </a>
+                    </div>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-6">
+                        <a href="#" class="social-icon text-gray-300 hover:text-primary text-2xl" data-implementation="Link to Instagram profile">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-300 hover:text-primary text-2xl" data-implementation="Link to TikTok profile">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-300 hover:text-primary text-2xl" data-implementation="Link to LinkedIn profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-300 hover:text-primary text-2xl" data-implementation="Link to YouTube channel">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-300 hover:text-primary text-2xl" data-implementation="Link to Twitter profile">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- Professional portrait of documentary producer with warm lighting -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000" alt="Perrine Keramphele - Documentary Producer" class="rounded-2xl shadow-2xl w-full" />
+                    
+                    <!-- Floating Achievement Cards -->
+                    <div class="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-foreground">15+</div>
+                            <div class="text-sm text-muted-foreground">Years Experience</div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-primary p-4 rounded-xl shadow-lg">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-foreground">1</div>
+                            <div class="text-sm text-foreground">Awards Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: FeaturedWork -->
+    <section class="py-16 lg:py-24 bg-muted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">Featured Documentary</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    My latest work exploring the intersection of technology and human connection in modern society.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative group">
+                    <!-- Cinematic documentary scene with urban setting -->
+                    <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800" alt="Digital Disconnect Documentary Scene" class="rounded-2xl shadow-xl w-full" />
+                    
+                    <div class="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="bg-primary text-foreground p-4 rounded-full text-2xl hover:scale-110 transition-transform" data-implementation="Play trailer functionality">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="mb-4">
+                        <span class="bg-primary text-foreground px-4 py-2 rounded-full text-sm font-semibold">Latest Release</span>
+                    </div>
+                    
+                    <h3 class="text-3xl lg:text-4xl font-serif font-bold mb-6">Digital Disconnect</h3>
+                    
+                    <p class="text-lg text-muted-foreground mb-8 leading-relaxed">
+                        A thought-provoking exploration of how social media and digital technology are reshaping human relationships. Ther 90-minute documentary follows five individuals as they navigate the challenges of authentic connection in an increasingly virtual world.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-semibold mb-2">Release Date</h4>
+                            <p class="text-muted-foreground">March 2024</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Runtime</h4>
+                            <p class="text-muted-foreground">90 minutes</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Awards</h4>
+                            <p class="text-muted-foreground">Best Documentary - Film Festival 2024</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Platform</h4>
+                            <p class="text-muted-foreground">Netflix, Amazon Prime</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-primary text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors" data-implementation="Link to watch trailer">
+                            Watch Trailer
+                        </a>
+                        <a href="#" class="border border-border text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-muted transition-colors" data-implementation="Link to full documentary">
+                            View Full Documentary
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: FeaturedWork -->
+
+    <!-- @COMPONENT: PortfolioSection -->
+    <section id="portfolio" class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">Portfolio</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                    A collection of documentaries that challenge perspectives and inspire change.
+                </p>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4" data-implementation="Filter functionality to show/hide projects by category">
+                    <button class="bg-primary text-foreground px-6 py-2 rounded-full font-semibold">All</button>
+                    <button class="bg-muted text-muted-foreground px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-foreground transition-colors">Social Issues</button>
+                    <button class="bg-muted text-muted-foreground px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-foreground transition-colors">Environment</button>
+                    <button class="bg-muted text-muted-foreground px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-foreground transition-colors">Technology</button>
+                    <button class="bg-muted text-muted-foreground px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-foreground transition-colors">Culture</button>
+                </div>
+            </div>
+            
+            <!-- @MAP: documentaries.map(doc => ( -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-card rounded-2xl overflow-hidden shadow-lg" data-category="social-issues">
+                    <div class="relative group">
+                        <!-- Urban documentary scene showing social challenges -->
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Voices Unheard Documentary" class="w-full h-64 object-cover" />
+                        
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play text-3xl mb-2"></i>
+                                <p class="font-semibold">Watch Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">Social Issues</span>
+                            <span class="text-sm text-muted-foreground">2023</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-serif font-semibold mb-3">Voices Unheard</h3>
+                        <p class="text-muted-foreground mb-4 line-clamp-3">
+                            A powerful exploration of homelessness in major cities, featuring personal stories of resilience and hope.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-award text-primary"></i>
+                                <span class="text-sm text-muted-foreground">Best Documentary</span>
+                            </div>
+                            
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card bg-card rounded-2xl overflow-hidden shadow-lg" data-category="environment">
+                    <div class="relative group">
+                        <!-- Ocean conservation documentary scene -->
+                        <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Ocean's Last Stand Documentary" class="w-full h-64 object-cover" />
+                        
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play text-3xl mb-2"></i>
+                                <p class="font-semibold">Watch Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Environment</span>
+                            <span class="text-sm text-muted-foreground">2022</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-serif font-semibold mb-3">Ocean's Last Stand</h3>
+                        <p class="text-muted-foreground mb-4 line-clamp-3">
+                            An urgent call to action documenting the devastating effects of climate change on marine ecosystems.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-globe text-primary"></i>
+                                <span class="text-sm text-muted-foreground">Global Release</span>
+                            </div>
+                            
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card bg-card rounded-2xl overflow-hidden shadow-lg" data-category="technology">
+                    <div class="relative group">
+                        <!-- Technology and AI documentary scene -->
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="The AI Revolution Documentary" class="w-full h-64 object-cover" />
+                        
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play text-3xl mb-2"></i>
+                                <p class="font-semibold">Watch Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Technology</span>
+                            <span class="text-sm text-muted-foreground">2023</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-serif font-semibold mb-3">The AI Revolution</h3>
+                        <p class="text-muted-foreground mb-4 line-clamp-3">
+                            Examining the transformative impact of artificial intelligence on industries, jobs, and society.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-fire text-primary"></i>
+                                <span class="text-sm text-muted-foreground">Trending</span>
+                            </div>
+                            
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 4 -->
+                <div class="project-card bg-card rounded-2xl overflow-hidden shadow-lg" data-category="culture">
+                    <div class="relative group">
+                        <!-- Cultural traditions documentary scene -->
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Traditions Lost Documentary" class="w-full h-64 object-cover" />
+                        
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play text-3xl mb-2"></i>
+                                <p class="font-semibold">Watch Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Culture</span>
+                            <span class="text-sm text-muted-foreground">2021</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-serif font-semibold mb-3">Traditions Lost</h3>
+                        <p class="text-muted-foreground mb-4 line-clamp-3">
+                            Preserving indigenous cultures and traditions before they disappear in our rapidly modernizing world.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-heart text-primary"></i>
+                                <span class="text-sm text-muted-foreground">Audience Choice</span>
+                            </div>
+                            
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 5 -->
+                <div class="project-card bg-card rounded-2xl overflow-hidden shadow-lg" data-category="social-issues">
+                    <div class="relative group">
+                        <!-- Education documentary scene -->
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Learning Barriers Documentary" class="w-full h-64 object-cover" />
+                        
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play text-3xl mb-2"></i>
+                                <p class="font-semibold">Watch Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Education</span>
+                            <span class="text-sm text-muted-foreground">2020</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-serif font-semibold mb-3">Learning Barriers</h3>
+                        <p class="text-muted-foreground mb-4 line-clamp-3">
+                            Addressing educational inequality and the digital divide affecting students worldwide.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                                <span class="text-sm text-muted-foreground">Educational Impact</span>
+                            </div>
+                            
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 6 -->
+                <div class="project-card bg-card rounded-2xl overflow-hidden shadow-lg" data-category="environment">
+                    <div class="relative group">
+                        <!-- Urban sustainability documentary scene -->
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Green Cities Documentary" class="w-full h-64 object-cover" />
+                        
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-play text-3xl mb-2"></i>
+                                <p class="font-semibold">Watch Preview</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Environment</span>
+                            <span class="text-sm text-muted-foreground">2022</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-serif font-semibold mb-3">Green Cities</h3>
+                        <p class="text-muted-foreground mb-4 line-clamp-3">
+                            Showcasing innovative urban sustainability initiatives transforming cities worldwide.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-leaf text-primary"></i>
+                                <span class="text-sm text-muted-foreground">Eco Winner</span>
+                            </div>
+                            
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="#" class="text-muted-foreground hover:text-primary" data-implementation="Share on LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center bg-primary text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors" data-implementation="Load more projects functionality">
+                    Load More Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: PortfolioSection -->
+
+    <!-- @COMPONENT: AboutSection -->
+    <section id="about" class="py-16 lg:py-24 bg-muted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-6">About Marcus</h2>
+                    
+                    <div class="space-y-6 text-lg text-muted-foreground">
+                        <p>
+                            With over 15 years in documentary filmmaking, I've dedicated my career to amplifying voices that need to be heard and stories that demand to be told. My work has taken me across six continents, documenting everything from environmental crises to social justice movements.
+                        </p>
+                        
+                        <p>
+                            I believe in the power of authentic storytelling to create meaningful change. Each documentary I produce is carefully crafted to not just inform, but to inspire action and foster deeper understanding of complex global issues.
+                        </p>
+                        
+                        <p>
+                            My films have been featured at major international film festivals and have received recognition from organizations including the Environmental Media Association and the International Documentary Association.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Experience</h4>
+                            <p class="text-muted-foreground">15+ Years</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Documentaries</h4>
+                            <p class="text-muted-foreground">47 Released</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Awards</h4>
+                            <p class="text-muted-foreground">12 International</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-foreground mb-2">Countries</h4>
+                            <p class="text-muted-foreground">32 Filmed In</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- Documentary production behind-the-scenes scene -->
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Perrine Keramphele filming documentary" class="rounded-2xl shadow-xl w-full" />
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Film equipment and crew working -->
+                        <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Documentary equipment" class="rounded-xl" />
+                        
+                        <!-- Interview setup scene -->
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Interview setup" class="rounded-xl" />
+                        
+                        <!-- Award ceremony or film festival scene -->
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Film festival screening" class="rounded-xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- @COMPONENT: TestimonialsSection -->
+    <section class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">What People Say</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Feedback from collaborators, subjects, and industry professionals.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-card p-8 rounded-2xl shadow-lg">
+                    <div class="mb-6">
+                        <div class="flex text-primary mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted-foreground italic">
+                            "Marcus has an incredible ability to build trust with her subjects and extract authentic, powerful stories. her documentaries don't just inform—they transform perspectives."
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <!-- Professional headshot of film industry professional -->
+                        <img src="https://pixabay.com/get/gaa9b650f59c33cdcb6e204b5042b40883c9075ab6f5a0c51d37d9e8144f9946f5df8bc7d2e8fd5bb530110281298171be3494ad6b65f29184d637e6cc6b0dd73_1280.jpg" alt="Sarah Chen" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-semibold">Sarah Chen</h4>
+                            <p class="text-sm text-muted-foreground">Netflix Documentary Director</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card p-8 rounded-2xl shadow-lg">
+                    <div class="mb-6">
+                        <div class="flex text-primary mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted-foreground italic">
+                            "Working with Marcus was transformative. He approached our story with sensitivity and authenticity, creating a documentary that truly captured our community's spirit."
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <!-- Professional headshot of community leader -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="David Rodriguez" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-semibold">David Rodriguez</h4>
+                            <p class="text-sm text-muted-foreground">Community Organizer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card p-8 rounded-2xl shadow-lg">
+                    <div class="mb-6">
+                        <div class="flex text-primary mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted-foreground italic">
+                            "Marcus consistently delivers documentaries that are both artistically compelling and socially impactful. her work sets the standard for documentary filmmaking."
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <!-- Professional headshot of film critic -->
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Emily Thompson" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-semibold">Emily Thompson</h4>
+                            <p class="text-sm text-muted-foreground">Film Critic, The Guardian</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TestimonialsSection -->
+
+    <!-- @COMPONENT: ContactSection -->
+    <section id="contact" class="py-16 lg:py-24 bg-muted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">Let's Create Something Meaningful</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Have a story that needs to be told? Let's discuss how we can bring it to life.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-serif font-semibold mb-8">Get In Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="bg-primary text-foreground p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-muted-foreground" data-bind="producer.email">marcus@documentaryproducer.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary text-foreground p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-muted-foreground" data-bind="producer.phone">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary text-foreground p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-muted-foreground" data-bind="producer.location">Los Angeles, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h4 class="font-semibold mb-6">Follow My Work</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="#" class="flex items-center p-4 bg-card rounded-lg hover:shadow-lg transition-shadow" data-implementation="Link to Instagram profile">
+                                <i class="fab fa-instagram text-2xl text-pink-500 mr-3"></i>
+                                <div>
+                                    <h5 class="font-semibold">Instagram</h5>
+                                    <p class="text-sm text-muted-foreground">Behind the scenes</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-card rounded-lg hover:shadow-lg transition-shadow" data-implementation="Link to TikTok profile">
+                                <i class="fab fa-tiktok text-2xl text-black mr-3"></i>
+                                <div>
+                                    <h5 class="font-semibold">TikTok</h5>
+                                    <p class="text-sm text-muted-foreground">Quick insights</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-card rounded-lg hover:shadow-lg transition-shadow" data-implementation="Link to LinkedIn profile">
+                                <i class="fab fa-linkedin text-2xl text-blue-600 mr-3"></i>
+                                <div>
+                                    <h5 class="font-semibold">LinkedIn</h5>
+                                    <p class="text-sm text-muted-foreground">Professional updates</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-card rounded-lg hover:shadow-lg transition-shadow" data-implementation="Link to YouTube channel">
+                                <i class="fab fa-youtube text-2xl text-red-600 mr-3"></i>
+                                <div>
+                                    <h5 class="font-semibold">YouTube</h5>
+                                    <p class="text-sm text-muted-foreground">Full documentaries</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-serif font-semibold mb-8">Send a Message</h3>
+                    
+                    <form class="space-y-6" data-implementation="Contact form submission with validation">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your name" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Project collaboration inquiry" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none" placeholder="Tell me about your project or story idea..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-foreground py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors" data-event="click:handleContactSubmit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-foreground text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <h3 class="text-2xl font-serif font-bold mb-4">Perrine Keramphele</h3>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Documentary producer dedicated to amplifying important voices and creating meaningful change through powerful storytelling.
+                    </p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors" data-implementation="Link to Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors" data-implementation="Link to TikTok">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors" data-implementation="Link to LinkedIn">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors" data-implementation="Link to YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors" data-implementation="Link to Twitter">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-primary transition-colors">Social Issues</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Environment</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Technology</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Culture</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Perrine Keramphele. All rights reserved. | Designed for impactful storytelling.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement smooth scrolling navigation
+        (function() {
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(ther.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // TODO: Implement portfolio filtering functionality
+            // TODO: Implement contact form validation and submission
+            // TODO: Implement social media redirect tracking
+            // TODO: Implement mobile navigation toggle
+        })();
+    </script>
+</body>
+</html>

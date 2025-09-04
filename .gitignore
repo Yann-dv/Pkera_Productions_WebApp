@@ -58,8 +58,3 @@ vite.config.ts.*
 
 # GitHub Pages deployment
 .gh-pages
-
-# Replit specific (since this appears to be a Replit project)
-.replit
-.local/
-replit.md

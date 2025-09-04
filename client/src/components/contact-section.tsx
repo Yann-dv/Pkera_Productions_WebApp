@@ -94,7 +94,7 @@ export default function ContactSection({ producer }: ContactSectionProps) {
                 <div>
                   <h4 className="font-semibold">Email</h4>
                   <p className="text-muted-foreground" data-testid="text-contact-email">
-                    {producer?.email || "marcus@documentaryproducer.com"}
+                    {producer?.email || "Perrine@documentaryproducer.com"}
                   </p>
                 </div>
               </div>
