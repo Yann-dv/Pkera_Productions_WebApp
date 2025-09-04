@@ -1,13 +1,12 @@
 {
-  "name": "Pkera_Productions_WebApp",
+  "name": "pkera-productions-webapp",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "build:static": "cross-env NODE_ENV=production vite build",
     "preview": "vite preview",
-    "check": "tsc",
-    "deploy": "npm run build:static && gh-pages -d dist/public"
+    "check": "tsc"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

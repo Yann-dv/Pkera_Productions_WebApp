@@ -22,7 +22,7 @@ export default function AboutSection({ producer }: AboutSectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-serif font-bold mb-6">About Marcus</h2>
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold mb-6">About Perrine</h2>
             
             <div className="space-y-6 text-lg text-muted-foreground">
               <p data-testid="text-producer-bio">
