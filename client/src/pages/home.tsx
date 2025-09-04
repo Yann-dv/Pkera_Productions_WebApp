@@ -11,19 +11,40 @@ import { type Documentary, type Testimonial, type ProducerInfo } from "@shared/s
 
 export default function Home() {
   const { data: documentaries, isLoading: docsLoading } = useQuery<Documentary[]>({
-    queryKey: ["/api/documentaries"],
+    queryKey: ["/data/documentaries.json"],
+    queryFn: async () => {
+      const response = await fetch(`${import.meta.env.BASE_URL}data/documentaries.json`);
+      if (!response.ok) throw new Error("Failed to fetch documentaries");
+      return response.json();
+    },
   });
 
   const { data: testimonials, isLoading: testimonialsLoading } = useQuery<Testimonial[]>({
-    queryKey: ["/api/testimonials"],
+    queryKey: ["/data/testimonials.json"],
+    queryFn: async () => {
+      const response = await fetch(`${import.meta.env.BASE_URL}data/testimonials.json`);
+      if (!response.ok) throw new Error("Failed to fetch testimonials");
+      return response.json();
+    },
   });
 
   const { data: producer, isLoading: producerLoading } = useQuery<ProducerInfo>({
-    queryKey: ["/api/producer"],
+    queryKey: ["/data/producer.json"],
+    queryFn: async () => {
+      const response = await fetch(`${import.meta.env.BASE_URL}data/producer.json`);
+      if (!response.ok) throw new Error("Failed to fetch producer info");
+      return response.json();
+    },
   });
 
   const { data: featured, isLoading: featuredLoading } = useQuery<Documentary>({
-    queryKey: ["/api/documentaries/featured"],
+    queryKey: ["/data/documentaries.json", "featured"],
+    queryFn: async () => {
+      const response = await fetch(`${import.meta.env.BASE_URL}data/documentaries.json`);
+      if (!response.ok) throw new Error("Failed to fetch documentaries");
+      const documentaries: Documentary[] = await response.json();
+      return documentaries.find(doc => doc.status === "featured") || documentaries[0];
+    },
   });
 
   if (docsLoading || testimonialsLoading || producerLoading || featuredLoading) {

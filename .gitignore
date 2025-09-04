@@ -53,9 +53,11 @@ tmp
 temp
 
 # Project specific
-server/public
 vite.config.ts.*
 *.tar.gz
+
+# GitHub Pages deployment
+.gh-pages
 
 # Replit specific (since this appears to be a Replit project)
 .replit

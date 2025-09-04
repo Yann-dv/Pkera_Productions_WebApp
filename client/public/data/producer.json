@@ -1,0 +1,14 @@
+{
+  "id": "1",
+  "name": "Perrine Keramphele",
+  "title": "Documentary Producer",
+  "bio": "With over 5 years in documentary filmmaking, I've dedicated my career to amplifying voices that need to be heard and stories that demand to be told. My work has taken me across six continents, documenting everything from environmental crises to social justice movements.",
+  "email": "pkera@documentaryproducer.com",
+  "phone": "+1 (555) 123-4567",
+  "location": "Paris, CA",
+  "experience": "5+ Years",
+  "documentariesCount": "10 Released",
+  "awardsCount": "1 International",
+  "countriesCount": "5 Filmed In",
+  "socialLinks": "{\"instagram\": \"https://www.instagram.com/pkera_productions\", \"tiktok\": \"#\", \"linkedin\": \"#\", \"youtube\": \"https://www.youtube.com/@Pkera_productions\", \"twitter\": \"#\"}"
+}

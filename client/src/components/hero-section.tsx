@@ -104,7 +104,7 @@ export default function HeroSection({ producer }: HeroSectionProps) {
           
           <div className="relative">
             <img
-              src="/images/hero-portrait.jpg"
+              src={`${import.meta.env.BASE_URL}images/hero-portrait.jpg`}
               alt="Perrine Keramphele - Documentary Producer"
               className="rounded-2xl shadow-2xl w-full"
               data-testid="img-hero-portrait"
@@ -113,7 +113,7 @@ export default function HeroSection({ producer }: HeroSectionProps) {
             <div className="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground" data-testid="text-years-experience">
-                  {producer?.experience || "15+"}
+                  {producer?.experience || "5+"}
                 </div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
