@@ -1,13 +1,13 @@
 {
-  "name": "Pkera_Productions_WebApp",
+  "name": "pkera-productions-webapp",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "build:static": "cross-env NODE_ENV=production vite build",
+    "dev": "vite dev",
     "preview": "vite preview",
-    "check": "tsc",
-    "deploy": "npm run build:static && gh-pages -d dist/public"
+    "check": "tsc"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -65,8 +65,7 @@
     "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
-    "@replit/vite-plugin-cartographer": "^0.3.0",
-    "@replit/vite-plugin-runtime-error-modal": "^0.0.3",
+
     "@tailwindcss/typography": "^0.5.15",
     "@tailwindcss/vite": "^4.1.3",
     "@types/node": "20.16.11",
