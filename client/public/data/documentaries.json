@@ -1,17 +1,17 @@
 [
   {
     "id": "1",
-    "title": "Digital Disconnect",
-    "description": "A thought-provoking exploration of how social media and digital technology are reshaping human relationships. this 90-minute documentary follows five individuals as they navigate the challenges of authentic connection in an increasingly virtual world.",
-    "category": "technology",
-    "year": "2024",
-    "imageUrl": "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-    "trailerUrl": "#",
-    "fullDocUrl": "#",
-    "awards": "Best Documentary - Film Festival 2024",
+    "title": "L'envie de vivre",
+    "description": "Une peur, un souffle, une lutte, une lumière et l'espoir de toute une vie… À 32 ans, Anaïs a pleins de projets en tête… mais la maladie va bousculer tous ses plans. Le 19 novembre 2024, elle apprend qu'elle va devoir se battre contre un cancer très rare et agressif. Et qu'il va falloir faire vite ! Les semaines sont comptées. Si elle ne suit pas un traitement de chimiothérapie le plus rapidement possible, les médecins sont formels : il ne lui reste que 5 mois à vivre. On lui diagnostique un lymphome de la zone grise (GZL). C'est un cancer très rare et agressif, qui touche le système lymphatique et immunitaire, avec des caractéristiques à la fois du lymphome hodgkinien (LH) et du lymphome médiastinal primitif à cellules B (PMBCL). Il peut être particulièrement difficile à diagnostiquer. Un très gros choc pour elle… Elle qui était coach sportive, commerciale en salle de sport, passionnée par le fitness et la boxe thaïlandaise… elle ne s'attendait pas à vivre une telle épreuve si jeune. Pendant 6 mois, je l'ai suivie dans son parcours pour combattre la maladie. Des pleurs, aux rires, aux peurs, à l'espoir, ce documentaire retrace son ressenti et celui de ses proches. Si j'ai décidé de réaliser ce documentaire, c'est pour une raison : Anaïs est ma grande sœur. Je me devais de réaliser ce film pour retracer une partie de sa vie, pour lui montrer à quel point elle est forte, courageuse et une grande source d'inspiration pour moi.",
+    "category": "Santé",
+    "year": "2025",
+    "imageUrl": "/images/l_envie_de_vivre_banner.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=ZYiY14TVUSQ",
+    "fullDocUrl": "https://www.youtube.com/watch?v=bL899lByd18",
+    "awards": "-",
     "status": "featured",
-    "platforms": "Netflix, Amazon Prime",
-    "runtime": "90 minutes",
+    "platforms": "Youtube",
+    "runtime": "37 minutes",
     "socialLinks": "{\"instagram\": \"#\", \"twitter\": \"#\", \"linkedin\": \"#\"}"
   },
   {
